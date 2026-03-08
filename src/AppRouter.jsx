@@ -11,7 +11,7 @@ import LiveSiteChrome from "./components/LiveSiteChrome";
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <LiveSiteChrome />
       <Routes>
         <Route path="/" element={<App />} />
