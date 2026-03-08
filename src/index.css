@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --live-duration: 220ms;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: #fafaf7;
+  color: #212121;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button {
+  transition: transform var(--live-duration) ease, filter var(--live-duration) ease, box-shadow var(--live-duration) ease, opacity var(--live-duration) ease;
+}
+
+a:hover,
+button:hover {
+  filter: brightness(1.03);
+}
+
+section article,
+section > div > div > article,
+section > div > div > div {
+  transition: transform var(--live-duration) ease, box-shadow var(--live-duration) ease, border-color var(--live-duration) ease;
+}
+
+section article:hover,
+section > div > div > article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-field {
+  color: #f7fbff;
+}
+
+.contact-form-field::placeholder {
+  color: #d5e4ef;
+  opacity: 1;
+}
+
+.contact-form-field:focus {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.contact-form-select option {
+  color: #1b2836;
+  background: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
